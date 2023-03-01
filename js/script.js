@@ -10,8 +10,6 @@ while (index < shoppingList.length) {
     let missingItemsEl = document.createElement("li");
     ulListEl.append(missingItemsEl);
     
-    missingItemsEl.style.backgroundColor = "black"
-
     missingItemsEl.textContent = shoppingList[index]
 
     index++;
