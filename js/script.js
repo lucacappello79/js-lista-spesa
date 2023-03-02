@@ -56,6 +56,7 @@ while (index < missingItems.length) {
 }*/
 
 const shoppingList = ["milk", "bananas", "apples", "butter unsalted","eggs","hard cheese","yoghurt","ice-cream"]
+const colorOptions = ["#698996", "#968c77", "#af7b85", "#8e837a", "#92705f", "#7e8c8d", "#7f90a3", "#6a858d", "#8a6d8f", "#807e6b"];
 
 let listGroupEl = document.querySelector(".list-group");
 let listItems = document.querySelectorAll(".list-group-item");
@@ -68,7 +69,10 @@ while (index < shoppingList.length) {
     missingItemsEl.classList.add("list-group-item", "list-group-item-action", "list-group-item-secondary");
     missingItemsEl.textContent = shoppingList[index];
 
-    let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    
+
+    let randomColor = colorOptions[Math.floor(Math.random() * colorOptions.length)];
+    //let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
     missingItemsEl.style.backgroundColor = randomColor;
     missingItemsEl.style.color = "white";
 
