@@ -67,6 +67,11 @@ while (index < shoppingList.length) {
     let missingItemsEl = document.createElement("a");
     missingItemsEl.classList.add("list-group-item", "list-group-item-action", "list-group-item-secondary");
     missingItemsEl.textContent = shoppingList[index];
+
+    let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    missingItemsEl.style.backgroundColor = randomColor;
+    missingItemsEl.style.color = "white";
+
     listGroupEl.append(missingItemsEl);
     index++;
 }
